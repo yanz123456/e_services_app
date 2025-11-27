@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
+import '../controllers/authentication_controller.dart';
 
-class OnboardingBinding extends Bindings {
+class AuthenticationBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<OnboardingController>(() => OnboardingController());
+    Get.lazyPut<AuthenticationController>(() => AuthenticationController());
   }
 }
