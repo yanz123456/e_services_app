@@ -45,5 +45,35 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- 👇 Add ATS exceptions to allow local HTTP for dev -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<!-- Allow all HTTP during development -->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+
+		<!-- Safer: only allow specific dev hosts (uncomment + edit if you prefer) -->
+		<!--
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+				<key>NSIncludesSubdomains</key><true/>
+			</dict>
+			<key>127.0.0.1</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+				<key>NSIncludesSubdomains</key><true/>
+			</dict>
+			<key>192.168.1.10</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+				<key>NSIncludesSubdomains</key><true/>
+			</dict>
+		</dict>
+		-->
+	</dict>
 </dict>
 </plist>
